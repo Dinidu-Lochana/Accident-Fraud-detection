@@ -179,7 +179,7 @@ elif option == "Auction Car Price":
             if price_model is not None:
                 try:
                     prediction = price_model.predict(input_data)
-                    st.markdown(f'<div class="prediction-box">💰 Estimated Price: £ {float(prediction[0]):,.2f}</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="prediction-box">💰 Estimated Price : £ {float(prediction[0]):,.2f}</div>', unsafe_allow_html=True)
                 except Exception as e:
                     st.error(f"Error making prediction: {e}")
             else:

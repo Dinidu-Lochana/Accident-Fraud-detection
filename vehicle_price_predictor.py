@@ -169,24 +169,24 @@ updated_df.shape
 updated_df = updated_df.drop('brand', axis=1)
 updated_df.head()
 
-#updated_df['model'].value_counts()
+updated_df['model'].value_counts()
 
-#threshold = 800
+threshold = 800
 
 # Identify rare models
-#model_counts = updated_df['model'].value_counts()
-#rare_models = model_counts[model_counts < threshold].index
+model_counts = updated_df['model'].value_counts()
+rare_models = model_counts[model_counts < threshold].index
 
 # Replace with 'Other'
-#updated_df['model'] = updated_df['model'].replace(rare_models, 'other')
+updated_df['model'] = updated_df['model'].replace(rare_models, 'other')
 
-#updated_df['model'].value_counts()
+updated_df['model'].value_counts()
 
-#model_type_variables = pd.get_dummies(updated_df['model'], dtype = int)
-#model_type_variables.head()
+model_type_variables = pd.get_dummies(updated_df['model'], dtype = int)
+model_type_variables.head()
 
-#updated_df = pd.concat([updated_df, model_type_variables], axis = 1)
-#updated_df.head()
+updated_df = pd.concat([updated_df, model_type_variables], axis = 1)
+updated_df.head()
 
 updated_df = updated_df.drop('model', axis=1)
 updated_df.head()

@@ -52,7 +52,7 @@ if option == "Fraud Accident Detector":
         st.write("Prediction Probabilities : ", prediction)
 
        
-        if prediction[0] < 0.5:  
+        if prediction[0] > 0.5:  
             st.markdown("### ❌ **Prediction: Fake Accident**")
             st.error("This image is likely to be a fake accident.")
             st.balloons()  

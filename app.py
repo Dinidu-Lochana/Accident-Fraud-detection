@@ -49,15 +49,17 @@ if option == "Fraud Accident Detector":
 
        
         st.success("Prediction complete!")
-        st.write("Prediction Probabilities : ", prediction)
+        
 
-       
-        if prediction[0] > 0.5:  
+        predict = prediction[0]
+
+        if predict > 0.7:
+            st.markdown("### ✅ **Prediction: Real Accident**")
+              
+        else:
             st.markdown("### ❌ **Prediction: Fake Accident**")
             st.error("This image is likely to be a fake accident.")
-            st.balloons()  
-        else:
-            st.markdown("### ✅ **Prediction: Real Accident**")
+            st.balloons()
             
 
 elif option == "Auction Car Price":
